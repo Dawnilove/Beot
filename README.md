@@ -38,7 +38,7 @@
 - **주간 요약과 알림** — 지연·정체된 일을 모아 주고, Discord 웹훅으로 제출·승인을 알려요.
 - **계획서 가져오기** — 마크다운 계획서를 읽어 일을 한꺼번에 만들어요.
 - **방 관리 화면** — 접속자, 방 코드, 백업, 방 끄기·닫기를 한곳에서.
-- **여러 에이전트** — Claude Code, Codex는 확인했고, Cursor·Gemini CLI·VS Code는 설정 파일을 만들어 줘요(`join --apps`). herdr, 마당(Madang)과도 이어져요.
+- **내 에이전트로** — Claude Code, Codex, herdr 안의 Claude는 확인했어요. 다른 에이전트는 `join --run 이름`으로 열고, Cursor·Gemini CLI·VS Code는 설정 파일을 만들어 줘요(`--apps`). herdr, 마당(Madang)과도 이어져요.
 - **백그라운드 실행** — 터미널을 닫아도 방은 켜져 있어요. 시계 옆 아이콘으로 끄거나 닫아요.
 
 <p align="center">
