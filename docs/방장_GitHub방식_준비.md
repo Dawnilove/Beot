@@ -45,7 +45,7 @@ $env:ROOM_PUBLIC_URL = "<팀원이 쓰는 방 주소>"
 
 ## 4. 저장소 점검과 규칙 세트 만들기
 ```powershell
-.\.venv\Scripts\python server.py setup-git
+.\.venv\Scripts\python -m beot server setup-git
 ```
 이 명령은 다음을 한다.
 1. 저장소가 공개인지, 토큰에 관리자 권한이 있는지, 기본 가지가 있는지, 병합 커밋이 허용인지, 규칙 세트를 읽을 수 있는지 점검한다.
@@ -56,7 +56,7 @@ $env:ROOM_PUBLIC_URL = "<팀원이 쓰는 방 주소>"
    - 방장(저장소 관리자)은 PR 병합 때만 규칙을 우회한다.
 
 ## 5. 방 만들기와 팀원 초대
-1. 방을 만든다: `.\.venv\Scripts\python server.py init --owner <방장 이름>`. 로그인 토큰이 한 번 출력된다.
+1. 방을 만든다: `.\.venv\Scripts\python -m beot server init --owner <방장 이름>`. 로그인 토큰이 한 번 출력된다.
 2. 방 서버를 켠다(운영 한 장의 1장 9번).
 3. 방장 화면에서 "팀원 추가"를 누른다. **이름**과 **팀원의 GitHub 사용자 이름**을 넣는다.
 4. 나온 안내문(방 주소, 단어 코드, 단계)을 팀원에게 보낸다. 안내문 첫 단계가 GitHub 초대 수락이다.
