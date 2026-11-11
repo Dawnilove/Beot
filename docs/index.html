@@ -171,7 +171,8 @@ footer { padding:36px 0 56px; border-top:1px solid var(--line); color:var(--dim)
     if (!r.ok) return;
     const j = await r.json();
     for (const id of ["ver", "ver2"]) { const e = document.getElementById(id); if (e && j.tag_name) e.textContent = j.tag_name; }
-    const a = (j.assets || []).find((x) => /win|windows|\.zip$|\.exe$/i.test(x.name));
+    const as = j.assets || [];  // 설치 파일(beot-setup-버전.exe)을 먼저, 없으면 압축 파일
+    const a = as.find((x) => /^beot-setup-.*\.exe$/i.test(x.name)) || as.find((x) => /windows.*\.zip$/i.test(x.name));
     if (a) document.querySelectorAll("[data-dl]").forEach((l) => { l.href = a.browser_download_url; });
   } catch (e) { /* 릴리스 페이지 링크를 그대로 쓴다 */ }
 })();
