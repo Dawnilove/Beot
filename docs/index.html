@@ -114,7 +114,7 @@ footer { padding:36px 0 56px; border-top:1px solid var(--line); color:var(--dim)
     <div class="card"><h3>주간 요약·알림</h3><p>마감이 지난 일, 정체된 일을 모아 주고 Discord 웹훅으로 알려요.</p></div>
     <div class="card"><h3>계획서 가져오기</h3><p>마크다운 계획서를 읽어서 일을 한꺼번에 만들어요.</p></div>
     <div class="card"><h3>방 관리</h3><p>접속자, 입구 주소와 방 코드, 백업, 방 끄기·닫기를 한 화면에서.</p></div>
-    <div class="card"><h3>백그라운드 실행</h3><p>터미널을 닫아도 방은 켜져 있어요. 시계 옆 아이콘으로 끄거나 닫아요.</p></div>
+    <div class="card"><h3>앱 창과 트레이</h3><p>창을 닫아도 방은 켜져 있어요. 시계 옆 아이콘에 앱이 남고, 아이콘의 종료로 끝내요.</p></div>
   </div>
 </div></section>
 
@@ -122,9 +122,9 @@ footer { padding:36px 0 56px; border-top:1px solid var(--line); color:var(--dim)
   <h2>3분 시작하기</h2>
   <p class="sec-sub">벗에는 세 역할이 있어요. 서버장은 보통 한 명이고, 방장과 팀원이 대부분이에요.</p>
   <ol class="steps">
-    <li><div><b>서버장이 입구를 열어요</b>Cloudflare 도메인과 API 토큰으로 <code>beot owner setup</code>을 한 번 실행하고, 방장에게 방장 열쇠를 줘요. 자세한 순서는 서버장 안내서에 있어요.</div></li>
-    <li><div><b>방장이 방을 만들어요</b>입구의 방장 탭에서 방을 만들고, 방장 PC에서 <code>beot start --code 방코드</code>를 실행해요. 일을 만들고 팀원을 초대해요.</div></li>
-    <li><div><b>팀원이 들어와요</b>방 코드를 받고 아래 명령을 실행해요. 닉네임과 비밀번호를 정하면 끝이에요.<pre><code>beot join --server 서버장주소</code></pre></div></li>
+    <li><div><b>서버장이 입구를 열어요</b>설치 파일로 설치하고 <code>beot.exe</code>를 더블클릭해 앱 창을 열어요. <b>새 서버 만들기</b>에서 Cloudflare 도메인과 API 토큰으로 서버를 설치하고 계정을 만들어요. 방장에게는 초대 코드를 줘요. 자세한 순서는 서버장 안내서에 있어요.</div></li>
+    <li><div><b>방장이 방을 만들어요</b>앱 창에서 초대 코드로 계정을 만들고, <b>만들고 켜기</b>로 방을 만들어요. 방 줄의 <b>팀원 초대</b>로 팀원을 초대하고, 방 화면에서 일을 만들어요.</div></li>
+    <li><div><b>팀원이 들어와요</b>방 코드와 단어 코드를 받고 아래 명령을 실행해요. 닉네임과 비밀번호를 정하면 끝이에요. 앱 창의 <b>팀원으로 들어가기</b>도 돼요.<pre><code>beot join --server 서버장주소</code></pre></div></li>
     <li><div><b>에이전트가 일해요</b>팀원의 에이전트가 <code>my_tasks</code>로 일을 받고, 자기 가지에 올리고, 제출해요. 방장이 승인하면 합쳐져요.</div></li>
   </ol>
 </div></section>
