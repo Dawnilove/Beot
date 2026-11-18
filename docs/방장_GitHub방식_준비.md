@@ -1,8 +1,10 @@
 # 방장 준비: GitHub 방식 방 만들기
 
+> 현재 판: 1.1.5
+
 > **경고 1:** 이 방식의 저장소는 **공개**다. 누구나 코드를 볼 수 있다. 팀 모두가 동의해야 한다. 비밀번호, API 키, `.env` 파일은 저장소에 올리지 않는다.
 > **경고 2:** 아래 3단계의 토큰은 이 저장소의 **관리자 권한**을 가진다. 새면 저장소를 남이 관리할 수 있다. 채팅, 파일, 화면 공유에 남기지 않는다. 환경 변수로만 둔다.
-> **표시:** (미확인) = 화면 이름과 권한 이름은 GitHub 공식 문서를 기준으로 썼고 이 방 서버와 실제로 연결해 시험하지 않았다. 이름이 다르면 GitHub 화면을 따른다. 시험은 G5에서 한다.
+> M2 회차 2(2026-11-16)에서 이 절차로 공개 저장소와 토큰을 만들고 GitHub 방식 방을 켰다(규칙 세트 2개 생성). 화면 이름이 다르면 GitHub 화면을 따른다.
 
 ## 0. 이 방식이 맞는가
 | | GitHub 방식 |
@@ -21,7 +23,7 @@
 4. 저장소 이름을 적어 둔다. 형식은 `소유자/이름`이다.
 5. 저장소 설정(Settings) > General > Pull Requests에서 **Allow merge commits**가 켜져 있는지 본다. 방이 병합 커밋 방식으로 병합한다.
 
-## 2. 토큰 만들기 (GitHub 화면, 미확인)
+## 2. 토큰 만들기 (GitHub 화면)
 1. GitHub의 Settings > Developer settings > Personal access tokens > **Fine-grained tokens**에서 새 토큰을 만든다.
 2. **Repository access**: Only select repositories를 고르고 **1단계의 저장소 하나만** 고른다.
 3. **Repository permissions**:
@@ -54,6 +56,7 @@ $env:ROOM_PUBLIC_URL = "<팀원이 쓰는 방 주소>"
    - 기본 가지(`main`)는 PR로만 바뀐다. 강제 push와 삭제는 막는다.
    - `member/<이름>/…` 가지 밖의 가지는 만들기·바꾸기·삭제를 막는다.
    - 방장(저장소 관리자)은 PR 병합 때만 규칙을 우회한다.
+4. **확인한다(무인 도우미를 켜기 전에 1번):** GitHub 저장소의 **Settings → Rules → Rulesets**에서 규칙 세트 2개가 **Active**인지 본다. Disabled이거나 없으면 `main` 보호가 비어 있다. 서버 쪽 push 거부는 GitHub 규칙 세트만 한다(로컬 보관 방식은 방 서버의 훅이 한다).
 
 ## 5. 방 만들기와 팀원 초대
 1. 방을 만든다: `.\.venv\Scripts\python -m beot server init --owner <방장 이름>`. 로그인 토큰이 한 번 출력된다.
