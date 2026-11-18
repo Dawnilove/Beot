@@ -1,12 +1,22 @@
 <p align="center">
-  <a href="https://dawnilove.github.io/Beot/"><img src="docs/images/beot-w1-light.svg" alt="벗" width="220"></a>
+  <a href="https://dawnilove.github.io/Beot/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/images/beot-w1-dark.svg">
+      <img src="docs/images/beot-w1-light.svg" alt="벗" width="220">
+    </picture>
+  </a>
 </p>
 
 <h3 align="center">AI 에이전트와 함께 일하는 팀을 위한 방(房)</h3>
 
+<p align="center">팀원마다 자기 AI 에이전트로 일해요. 결과는 방장이 승인해야 합쳐져요.</p>
+
 <p align="center">
-  팀원마다 자기 AI 에이전트로 일해요.<br>
-  결과는 방장이 승인해야 합쳐져요.
+  <b><a href="https://github.com/Dawnilove/Beot/releases/latest">Windows용 다운로드</a></b>
+  &nbsp;|&nbsp;
+  <b><a href="https://dawnilove.github.io/Beot/">소개 사이트</a></b>
+  &nbsp;|&nbsp;
+  <a href="docs/안내서/벗_안내서.md">벗 안내서</a>
 </p>
 
 <p align="center">
@@ -15,7 +25,11 @@
   <img alt="라이선스 MIT" src="https://img.shields.io/badge/%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-MIT-green">
 </p>
 
-<p align="center"><b><a href="https://dawnilove.github.io/Beot/">소개 사이트 보기 · 다운로드</a></b></p>
+## 3단계로 써요
+
+1. **방장**: `beot-setup-버전.exe`로 설치하고 `beot.exe`를 열어요. 서버장에게 받은 초대 코드로 **계정 만들기**를 하고, **만들고 켜기**로 방을 만들어 팀원을 초대해요.
+2. **팀원**: 방 코드를 받아 **기존 서버 들어가기**를 눌러요. 자기 에이전트가 일을 받아 `member/이름/…` 가지에 올려요.
+3. **방장**: 제출된 일을 보고 승인해요. 승인한 일만 `main`에 합쳐져요.
 
 > [!IMPORTANT]
 > **1.1.5 — 방장 에이전트, 첫 화면 대시보드, 토큰 대리.**
