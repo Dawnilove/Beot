@@ -6,7 +6,7 @@
 <title>벗: AI 에이전트와 함께 일하는 팀을 위한 프로젝트 서버</title>
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1d2b2a" media="(prefers-color-scheme: dark)">
-<meta name="description" content="팀원마다 자기 AI 에이전트로 일하고, 결과는 리더가 승인해야 합쳐져요. 1.1.7에서 안내 챗봇과 전체 일 트리가 생겼어요.">
+<meta name="description" content="팀원마다 자기 AI 에이전트로 일하고, 결과는 리더가 승인해야 합쳐져요. 1.1.8에서 포터블 벗과 켜진 채 업데이트가 생겼어요.">
 <link rel="icon" href="images/beot-icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
@@ -190,7 +190,7 @@ td { color: var(--color-ink-2); }
 <header class="nav"><div class="container">
   <a class="brand" href="#top"><img src="images/beot-icon.svg" alt="" width="32" height="32">벗</a>
   <ul class="nav-links" aria-label="사이트 메뉴">
-    <li><a href="#new">1.1.7 새 기능</a></li><li><a href="#why">왜 벗</a></li><li><a href="#screens">화면</a></li><li><a href="#features">기능</a></li><li><a href="#start">시작하기</a></li><li><a href="#agents">에이전트 연결</a></li><li><a href="#faq">문제 해결</a></li>
+    <li><a href="#new">1.1.8 새 기능</a></li><li><a href="#why">왜 벗</a></li><li><a href="#screens">화면</a></li><li><a href="#features">기능</a></li><li><a href="#start">시작하기</a></li><li><a href="#agents">에이전트 연결</a></li><li><a href="#faq">문제 해결</a></li>
   </ul>
   <a class="btn btn--quiet btn--small" href="https://github.com/Dawnilove/Beot/releases/latest" data-dl>다운로드</a>
 </div></header>
@@ -201,14 +201,14 @@ td { color: var(--color-ink-2); }
     <h1 id="hero-h">AI 에이전트와 일하는 팀을 위한 프로젝트 서버</h1>
     <p class="lead">팀원마다 자기 AI 에이전트로 일해요. 결과는 리더가 승인해야 합쳐져요.</p>
     <div class="actions"><a class="btn" href="https://github.com/Dawnilove/Beot/releases/latest" data-dl>Windows용 다운로드</a><a class="btn btn--quiet" href="#start">3분 시작하기</a></div>
-    <p class="hero-meta">Windows 10과 11, 무료, MIT 라이선스. 최신 판 <span id="ver">1.1.7</span>. <a href="#new">1.1.7 새 기능 보기</a></p>
+    <p class="hero-meta">Windows 10과 11, 무료, MIT 라이선스. 최신 판 <span id="ver">1.1.8</span>. <a href="#new">1.1.8 새 기능 보기</a></p>
   </div>
 
   <div class="desk" id="desk">
     <p class="desk-h">지금은 당신이 리더예요.</p>
     <p class="desk-sub">팀원의 에이전트가 PR 3개를 올렸어요. 도장을 찍은 PR만 <code>main</code>에 합쳐져요.</p>
     <ol class="prs">
-      <li class="row base"><code>main</code> 1.1.7 릴리스</li>
+      <li class="row base"><code>main</code> 1.1.8 릴리스</li>
       <li class="row" data-who="지수"><div class="pr">
         <span class="pr-who">지수의 Claude Code</span>
         <p class="pr-title">로그인 화면에 오류 문구 추가</p>
@@ -239,18 +239,20 @@ td { color: var(--color-ink-2); }
 
 <section class="sec tinted" id="new"><div class="container">
   <div class="sec-head">
-    <h2>1.1.7: 안내 챗봇과 전체 일 트리</h2>
-    <p>프로젝트 화면에서 안내 봇에게 물어봐요. 일 사이의 관계는 트리로 한눈에 봐요.</p>
+    <h2>1.1.8: 포터블 벗과 켜진 채 업데이트</h2>
+    <p>같은 PC에서 두 번째 계정으로 들어가요. 업데이트할 때 벗을 끄지 않아도 돼요.</p>
   </div>
   <ul class="rows">
-    <li><h3>안내 챗봇</h3><p>프로젝트 화면의 안내 봇이 묻는 말에 답해요. 봇은 리더 작업 폴더를 읽기만 하고, 비밀 경로는 읽지 않아요. 연결 기능(<code>beot guide link</code>)은 리더가 데스크톱 앱에서 연결해야 써요.</p></li>
-    <li><h3>전체 일 트리</h3><p>일 사이의 연결선을 그려요. 가지를 접고 펴요. 후행 일의 진행률과, 선행을 기다리는 일의 대기 배지를 보여 줘요.</p></li>
-    <li><h3>결함 수정</h3><p>같은 이름으로 다시 만든 프로젝트의 리더 로그인 결함을 고쳤어요. 토큰이 거절되면 토큰 문제라고 알려 줘요.</p></li>
-    <li><h3>업데이트 확인 30분</h3><p>앱이 새 버전을 30분마다 확인해요(전에는 6시간).</p></li>
-    <li><h3>1.1.6에서 온 것</h3><p>방은 프로젝트, 방장은 리더로 이름이 바뀌었어요. 도움말 모드, 자동 분배 기본 켬. 팀원 폴더 이름은 <code>--folder-name</code>으로 정해요.</p></li>
+    <li><h3>포터블 벗</h3><p>설치한 벗(리더)과 포터블 벗(팀원 계정)을 같은 PC에서 함께 켜요. 계정 · 작업 폴더 · 토큰은 포터블 폴더 안에만 둬요. 창 제목은 <b>벗 · 포터블</b>이에요.</p></li>
+    <li><h3>켜진 채 업데이트</h3><p>설치기가 이 폴더의 벗만 끄고 설치해요. 켜져 있던 프로젝트 · 토큰 대리 · 무인 도우미 · 안내봇은 설치 뒤 다시 켜요. 앱은 30분마다 새 판을 확인하고 묻지 않고 설치해요(설정에서 꺼요).</p></li>
+    <li><h3>트레이 [완전 종료]</h3><p>프로젝트 · 무인 도우미 · 토큰 대리까지 끄고 앱을 끝내요. 포터블을 덮어쓰거나 지우기 전에 써요. 평소 [종료]는 그대로예요.</p></li>
+    <li><h3>검토 관문 강화</h3><p>리더가 1차 검토 모델을 정해요(기본 Sonnet 5.5 medium). 검사가 실패한 제출은 1차 통과를 받지 못해요. 보호 경로를 바꾼 제출은 사람만 판정해요. 승인한 사람과 시각이 보여요.</p></li>
+    <li><h3>흐름 보기와 임시 담당</h3><p>전체 일이 단계 열로 놓이고, 고른 일의 앞뒤 사슬만 화살표로 그려요. 도우미가 3시간 넘게 멈춘 병목 일은 리더가 다른 팀원에게 <b>[임시 담당]</b>으로 빌려줘요.</p></li>
+    <li><h3>첫 화면 대시보드</h3><p>지표 5칸, 팀원별 카드, 지금 볼 일, 최근 완료를 한 화면에 보여요. 주간 · 일간으로 기간을 바꿔요.</p></li>
   </ul>
-  <p class="note"><b>올리는 순서.</b> 1.1.6 이하를 쓰면 <code>beot backup</code>으로 프로젝트를 백업하고 리더 PC부터 올려요. 팀원 PC는 그다음에 올리고, 무인 도우미(<code>beot agent</code>)를 다시 켜요.</p>
-  <p class="more"><a href="https://github.com/Dawnilove/Beot/releases/tag/v1.1.7">1.1.7 릴리스 노트 전체 보기</a></p>
+  <p class="note"><b>올리는 순서.</b> <code>beot backup</code>으로 프로젝트를 백업하고 리더 PC부터 올려요. 팀원 PC는 그다음에 올려요. 1.1.7에서 1.1.8로 올릴 때만 한 번, 업데이트 뒤 프로젝트와 무인 도우미(<code>beot agent</code>)를 손으로 다시 켜요.</p>
+  <p class="note">안내 챗봇의 연결은 아직 막혀 있어요. 사람 실측을 마친 뒤 열려요.</p>
+  <p class="more"><a href="https://github.com/Dawnilove/Beot/releases/tag/v1.1.8">1.1.8 릴리스 노트 전체 보기</a></p>
 </div></section>
 
 <section class="sec" id="why"><div class="container">
@@ -367,7 +369,7 @@ td { color: var(--color-ink-2); }
 <footer class="foot"><div class="container">
   <div>
     <div class="foot-mark"><img src="images/beot-icon.svg" alt="" width="48" height="48">벗</div>
-    <p>판 <span id="ver2">1.1.7</span>, MIT 라이선스</p>
+    <p>판 <span id="ver2">1.1.8</span>, MIT 라이선스</p>
   </div>
   <ul><li><a href="https://github.com/Dawnilove/Beot">GitHub</a></li><li><a href="https://github.com/Dawnilove/Beot/issues">문제 알리기</a></li></ul>
 </div></footer>
