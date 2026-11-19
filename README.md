@@ -22,7 +22,7 @@
 <p align="center">
   <a href="https://dawnilove.github.io/Beot/"><img alt="최신 버전" src="https://img.shields.io/github/v/release/Dawnilove/Beot?label=%EB%B2%84%EC%A0%84"></a>
   <img alt="Windows" src="https://img.shields.io/badge/Windows-10%20%7C%2011-blue">
-  <img alt="라이선스 MIT" src="https://img.shields.io/badge/%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-MIT-green">
+  <img alt="라이선스 PolyForm Noncommercial" src="https://img.shields.io/badge/%EB%9D%BC%EC%9D%B4%EC%84%A0%EC%8A%A4-PolyForm%20Noncommercial-orange">
 </p>
 
 ## 3단계로 써요
@@ -140,4 +140,8 @@ Python(프로젝트 서버, MCP, SQLite), Cloudflare Workers·Tunnel, GitHub, �
 
 ## 라이선스
 
-[MIT](LICENSE)
+[PolyForm Noncommercial 1.0.0](LICENSE)
+
+- 개인 · 학습 · 연구 · 비영리 단체의 사용은 무료예요.
+- 상업적 사용은 개발자의 허락이 필요해요. [Dawnilove](https://github.com/Dawnilove)에게 문의해요.
+- 이전 판도 모두 이 라이선스로 배포해요.
