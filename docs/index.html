@@ -6,7 +6,7 @@
 <title>벗: AI 에이전트와 함께 일하는 팀을 위한 프로젝트 서버</title>
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1d2b2a" media="(prefers-color-scheme: dark)">
-<meta name="description" content="팀원마다 자기 AI 에이전트로 일하고, 결과는 리더가 승인해야 합쳐져요. 1.1.14에서 에이전트 최종 검토와 결정마다 비밀번호가 생겼어요.">
+<meta name="description" content="팀원마다 자기 AI 에이전트로 일하고, 결과는 리더가 승인해야 합쳐져요. 1.1.15에서 Orca 봇을 연결할 수 있게 됐어요.">
 <link rel="icon" href="images/beot-icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
@@ -190,7 +190,7 @@ td { color: var(--color-ink-2); }
 <header class="nav"><div class="container">
   <a class="brand" href="#top"><img src="images/beot-icon.svg" alt="" width="32" height="32">벗</a>
   <ul class="nav-links" aria-label="사이트 메뉴">
-    <li><a href="#new">1.1.14 새 기능</a></li><li><a href="#why">왜 벗</a></li><li><a href="#screens">화면</a></li><li><a href="#features">기능</a></li><li><a href="#start">시작하기</a></li><li><a href="#agents">에이전트 연결</a></li><li><a href="#faq">문제 해결</a></li>
+    <li><a href="#new">1.1.15 새 기능</a></li><li><a href="#why">왜 벗</a></li><li><a href="#screens">화면</a></li><li><a href="#features">기능</a></li><li><a href="#start">시작하기</a></li><li><a href="#agents">에이전트 연결</a></li><li><a href="#faq">문제 해결</a></li>
   </ul>
   <a class="btn btn--quiet btn--small" href="https://github.com/Dawnilove/Beot/releases/latest" data-dl>다운로드</a>
 </div></header>
@@ -201,14 +201,14 @@ td { color: var(--color-ink-2); }
     <h1 id="hero-h">AI 에이전트와 일하는 팀을 위한 프로젝트 서버</h1>
     <p class="lead">팀원마다 자기 AI 에이전트로 일해요. 결과는 리더가 승인해야 합쳐져요.</p>
     <div class="actions"><a class="btn" href="https://github.com/Dawnilove/Beot/releases/latest" data-dl>Windows용 다운로드</a><a class="btn btn--quiet" href="#start">3분 시작하기</a></div>
-    <p class="hero-meta">Windows 10과 11, 비상업적 사용 무료(PolyForm Noncommercial). 최신 판 <span id="ver">1.1.14</span>. <a href="#new">1.1.14 새 기능 보기</a></p>
+    <p class="hero-meta">Windows 10과 11, 비상업적 사용 무료(PolyForm Noncommercial). 최신 판 <span id="ver">1.1.15</span>. <a href="#new">1.1.15 새 기능 보기</a></p>
   </div>
 
   <div class="desk" id="desk">
     <p class="desk-h">지금은 당신이 리더예요.</p>
     <p class="desk-sub">팀원의 에이전트가 PR 3개를 올렸어요. 도장을 찍은 PR만 <code>main</code>에 합쳐져요.</p>
     <ol class="prs">
-      <li class="row base"><code>main</code> 1.1.14 릴리스</li>
+      <li class="row base"><code>main</code> 1.1.15 릴리스</li>
       <li class="row" data-who="지수"><div class="pr">
         <span class="pr-who">지수의 Claude Code</span>
         <p class="pr-title">로그인 화면에 오류 문구 추가</p>
@@ -239,20 +239,21 @@ td { color: var(--color-ink-2); }
 
 <section class="sec tinted" id="new"><div class="container">
   <div class="sec-head">
-    <h2>1.1.14: 에이전트 최종 검토와 결정마다 비밀번호</h2>
-    <p>리더가 명령하면 리더 도우미가 제출 1건을 최종 검토해요. 사람의 최종 결정은 결정마다 비밀번호로 확인해요.</p>
+    <h2>1.1.15: Orca 봇 연결</h2>
+    <p>설정에서 Orca 봇을 프로젝트에 붙이고, 봇이 할 역할을 골라요. 안내 창은 없어졌어요.</p>
   </div>
   <ul class="rows">
-    <li><h3>결정마다 비밀번호</h3><p>최종 승인 · 반려 창에 "내 비밀번호" 칸이 생겼어요. 로그인한 상태여도 결정할 때마다 넣어요. 여러 번 틀리면 10분 동안 잠겨요. 에이전트가 로그인된 화면을 조작해 결정하는 것을 막아요.</p></li>
-    <li><h3>에이전트 최종 검토</h3><p><b>[에이전트 최종 검토]</b>를 누르고 비밀번호를 1번 넣으면 리더 도우미가 Opus 5.5 · xhigh로 다시 검토해 승인 · 반려 · 사람에게 돌리기로 판정해요. 허가는 그 커밋에만 30분 동안 1번 쓰여요. 보호 경로 · 계획 변경 · 검사 실패 제출은 맡기지 않아요.</p></li>
-    <li><h3>1차 검토 넓힘</h3><p>리더 본인의 제출, 계획 변경 제안, 보호 경로 제출도 1차 검토해요. 리더 폴더에 원격 저장소가 없어도 임시 저장소에 제출만 받아 검토해요.</p></li>
-    <li><h3>트레이 알림</h3><p>창을 닫아도 결정 요청 · 검토 대기 · 마감 · 프로젝트 서버 꺼짐을 Windows 알림으로 보내요. 팀원 PC도 내게 온 알림을 받아요.</p></li>
-    <li><h3>검토 · 일 화면</h3><p>GitHub 화면에서 병합된 제출을 찾아 승인으로 맞춰요. 검토 화면에 PR 링크가 생겼어요. 흐름 보기를 확대 · 축소해요.</p></li>
-    <li><h3>안내봇</h3><p>앱 설정의 안내봇 카드에서 켜고, 앱을 켤 때 자동으로 켜요. 팀원 화면에도 보여요. 연결 코드 발급은 아직 막혀 있어요.</p></li>
+    <li><h3>Orca 봇 연결</h3><p>설정에서 <b>Orca 봇 연결</b>을 누르면 고른 봇이 프로젝트의 일 · 채팅 도구를 써요. 들어온 프로젝트와 리더 에이전트에 모두 붙여요. 봇에는 프로젝트 토큰 대신 이 PC에서만 쓸모 있는 대리 열쇠만 넘겨요. Node.js(npx)가 필요해요.</p></li>
+    <li><h3>봇 역할 고르기</h3><p>일 처리 · 질문 답변 / 검토 / 진행 관리 / 학습 PC 배정 중에서 골라요. <b>봇 지시문 복사</b>로 봇 채팅에 붙여요.</p></li>
+    <li><h3>리더 에이전트는 하나만</h3><p>무인 도우미와 Orca 봇 중 하나만 켜요. 서버가 다른 쪽의 검토를 거부해요. Orca 봇 모드에서는 봇이 1차 통과와 에이전트 최종 검토도 하고, 모델 · 노력을 확인할 수 없는 <b>약한 검토</b>로 표시돼요. 최종 검토는 이전처럼 사람의 비밀번호 허가가 필요해요.</p></li>
+    <li><h3>안내봇 제거</h3><p>프로젝트 화면의 안내 창과 설정의 안내봇 카드, <code>beot guide</code> 명령이 없어졌어요.</p></li>
+    <li><h3>도우미 한도 알림</h3><p>도우미가 하루 실행 한도에 닿아도 프로젝트 채팅에 글을 올리지 않아요. 도우미 카드와 기록에만 남아요.</p></li>
+    <li><h3>그 밖에</h3><p>흐름 · 칸반 · 타임라인 보기가 화면 폭을 다 써요. 도우미가 claude · git을 띄울 때 콘솔 창이 뜨지 않아요.</p></li>
   </ul>
   <p class="note"><b>올리는 순서.</b> <code>beot backup</code>으로 프로젝트를 백업하고 리더 PC부터 올려요. 팀원 PC도 올려요. 서버장이 할 일은 없어요.</p>
+  <p class="note"><b>확인하지 못한 것.</b> Orca 연결은 읽기 · 일 맡기 · 메모까지 확인했어요. 일 제출, 주기 실행으로 스스로 깨어나기, 허가 직후 봇 깨우기는 확인하지 못했어요(미확인).</p>
   <p class="note"><b>주의.</b> 에이전트가 사람의 비밀번호를 알면 막지 못해요. 에이전트에게 비밀번호를 알려 주지 마세요.</p>
-  <p class="more"><a href="https://github.com/Dawnilove/Beot/releases/tag/v1.1.14">1.1.14 릴리스 노트 전체 보기</a> · <a href="https://github.com/Dawnilove/Beot/releases">지난 판</a></p>
+  <p class="more"><a href="https://github.com/Dawnilove/Beot/releases/tag/v1.1.15">1.1.15 릴리스 노트 전체 보기</a> · <a href="https://github.com/Dawnilove/Beot/releases">지난 판</a></p>
 </div></section>
 
 <section class="sec" id="why"><div class="container">
@@ -369,7 +370,7 @@ td { color: var(--color-ink-2); }
 <footer class="foot"><div class="container">
   <div>
     <div class="foot-mark"><img src="images/beot-icon.svg" alt="" width="48" height="48">벗</div>
-    <p>판 <span id="ver2">1.1.14</span>, PolyForm Noncommercial 라이선스</p>
+    <p>판 <span id="ver2">1.1.15</span>, PolyForm Noncommercial 라이선스</p>
   </div>
   <ul><li><a href="https://github.com/Dawnilove/Beot">GitHub</a></li><li><a href="https://github.com/Dawnilove/Beot/issues">문제 알리기</a></li></ul>
 </div></footer>
